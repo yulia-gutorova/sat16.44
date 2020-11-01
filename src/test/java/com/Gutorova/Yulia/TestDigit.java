@@ -21,7 +21,6 @@ public class TestDigit {
          Scanner scanner = new Scanner("-5");
          digit.setDecimal_number(scanner);
          assertEquals((Integer) 1, Digit.error);
-         //assertEquals(1, Digit.error );
      }
 
      @Test

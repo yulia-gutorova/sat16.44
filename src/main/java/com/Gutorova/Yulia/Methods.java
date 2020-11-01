@@ -49,7 +49,7 @@ public class Methods {
         hex_number_revers = new StringBuffer(hex_number).reverse().toString();
         return hex_number_revers;
     }
-//--------------------------------------------
+/*//--------------------------------------------
 
 //Method binary digit --> decimal digit
     static int bit_to_dec(int m)
@@ -64,6 +64,6 @@ public class Methods {
         }
         return dec_number;
     }
-//--------------------------------------------
+//--------------------------------------------*/
 
 }
