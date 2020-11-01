@@ -20,7 +20,8 @@ public class TestDigit {
      {
          Scanner scanner = new Scanner("-5");
          digit.setDecimal_number(scanner);
-         assertEquals(1, Digit.error );
+         assertEquals((Integer) 1, Digit.error);
+         //assertEquals(1, Digit.error );
      }
 
      @Test
@@ -28,7 +29,7 @@ public class TestDigit {
      {
          Scanner scanner = new Scanner("hgf");
          digit.setDecimal_number(scanner);
-         assertEquals(1, Digit.warning);
+         assertEquals((Integer) 1, Digit.warning);
      }
 
      @Test
@@ -36,8 +37,8 @@ public class TestDigit {
      {
          Scanner scanner = new Scanner("5");
          digit.setDecimal_number(scanner);
-         assertEquals(0, Digit.error);
-         assertEquals(0, Digit.warning);
+         assertEquals((Integer) 0, Digit.error);
+         assertEquals((Integer) 0, Digit.warning);
      }
 
 }

@@ -6,9 +6,6 @@ import static org.junit.Assert.*;
 
 public class TestTryAgain {
 
-    //private TryAgain tryagain = new TryAgain();
-    //Digit digit = new Digit (0, "0", "0", "0");
-    //Methods methods = new Methods();
 
     @BeforeClass
     public static void messBeforeClassTest()

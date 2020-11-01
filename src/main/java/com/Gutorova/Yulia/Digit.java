@@ -4,14 +4,13 @@ import java.util.Scanner;
 
 class Digit
 {
-    private int decimal_number;
+    private Integer decimal_number;
     private String binary_number;
     private String octal_number;
     private String hex_number;
-    static int  error = 0, warning = 0;
+    static Integer  error = 0, warning = 0;
 
-
-
+    
     public Digit(int decimal_number, String binary_number, String octal_number, String hex_number)
     {
         this.decimal_number = decimal_number;
@@ -31,6 +30,7 @@ class Digit
         {
             warning = 0;
             decimal_number = input.nextInt();
+
             if (decimal_number > 0)
              {
             error = 0;
