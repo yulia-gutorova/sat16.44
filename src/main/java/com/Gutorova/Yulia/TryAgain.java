@@ -12,13 +12,17 @@ public class TryAgain
 
         Scanner inp = new Scanner(System.in);
         System.out.print("Input a positive decimal number  ");
+        DecimalToHexadecimal hexa = new DecimalToHexadecimal();
+        DecimalToBinery bin = new DecimalToBinery();
+        DecimalToOctal oct = new DecimalToOctal();
 
         D.setDecimal_number(inp);
 
-    if (Digit.warning == 0 && Digit.error == 0 ) {
-        D.setBinary_number(Methods.dec_to_bin(D.getDecimal_number()));
-        D.setOctal_number(Methods.dec_to_oct(D.getDecimal_number()));
-        D.setHex_number(Methods.dec_to_hex(D.getDecimal_number()));
+    if (Digit.warning == 0 && Digit.error == 0 )
+    {
+        D.setBinary_number(bin.convert(D.getDecimal_number()));
+        D.setOctal_number(oct.convert(D.getDecimal_number()));
+        D.setHex_number(hexa.convert(D.getDecimal_number()));
         System.out.println(D);
     }
 

@@ -5,7 +5,9 @@ import java.util.Scanner;
 import static org.junit.Assert.*;
 
 public class TestTryAgain {
-
+    DecimalToHexadecimal hexa = new DecimalToHexadecimal();
+    DecimalToBinery bin = new DecimalToBinery();
+    DecimalToOctal oct = new DecimalToOctal();
 
     @BeforeClass
     public static void messBeforeClassTest()
@@ -25,7 +27,7 @@ public class TestTryAgain {
 
         System.out.println("*testDec_to_bin*");
         System.out.println("*The test of the method <dec_to_bin> to convert a decimal number to binary number*");
-        assertTrue("Error in the method dec_to_bin","1100000111".equals(Methods.dec_to_bin(775)));
+        assertTrue("Error in the method dec_to_bin","1100000111".equals(bin.convert(775)));
     }
 
     @Test
@@ -33,7 +35,7 @@ public class TestTryAgain {
     {
         System.out.println("*testDec_to_oct*");
         System.out.println("*The test of the method <dec_to_oct> to convert a decimal number to octal number*");
-        assertTrue("Error in the method dec_to_oct","1407".equals(Methods.dec_to_oct(775)));
+        assertTrue("Error in the method dec_to_oct","1407".equals(oct.convert(775)));
     }
 
     @Test
@@ -41,7 +43,7 @@ public class TestTryAgain {
     {
         System.out.println("*testDec_to_hex*");
         System.out.println("*The test of the method <dec_to_hex> to convert a decimal number to hexadecimal number*");
-        assertTrue("Error in the method dec_to_hex", "307".equals(Methods.dec_to_hex(775)));
+        assertTrue("Error in the method dec_to_hex", "307".equals(hexa.convert(775)));
     }
 
     @Test
