@@ -13,7 +13,7 @@ public class TryAgain
         Scanner inp = new Scanner(System.in);
         System.out.print("Input a positive decimal number  ");
         DecimalToHexadecimal hexa = new DecimalToHexadecimal();
-        DecimalToBinery bin = new DecimalToBinery();
+        DecimalToBinary bin = new DecimalToBinary();
         DecimalToOctal oct = new DecimalToOctal();
 
         D.setDecimal_number(inp);

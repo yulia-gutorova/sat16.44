@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class TestTryAgain {
     DecimalToHexadecimal hexa = new DecimalToHexadecimal();
-    DecimalToBinery bin = new DecimalToBinery();
+    DecimalToBinary bin = new DecimalToBinary();
     DecimalToOctal oct = new DecimalToOctal();
 
     @BeforeClass
