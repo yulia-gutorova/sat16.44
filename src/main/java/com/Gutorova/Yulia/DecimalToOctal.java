@@ -1,7 +1,7 @@
 package com.Gutorova.Yulia;
 
 public class DecimalToOctal implements Interface{
-    public String convert (int x)
+    public String convert (Integer x)
     {
         int oct_code;
         String oct_number = "", oct_number_revers = "";

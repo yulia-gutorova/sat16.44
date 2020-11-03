@@ -1,7 +1,7 @@
 package com.Gutorova.Yulia;
 
 public class DecimalToHexadecimal implements Interface {
-     public String convert (int x)
+     public String convert (Integer x)
     {
         int hex_code;
         String hex_number = "", hex_number_revers = "";
