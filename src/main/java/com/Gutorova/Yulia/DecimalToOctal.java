@@ -3,7 +3,7 @@ package com.Gutorova.Yulia;
 public class DecimalToOctal implements Interface{
     public String convert (Integer x)
     {
-        int oct_code;
+        Integer oct_code;
         String oct_number = "", oct_number_revers = "";
         while(x != 0)
         {

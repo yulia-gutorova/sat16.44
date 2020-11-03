@@ -3,7 +3,7 @@ package com.Gutorova.Yulia;
 public class DecimalToHexadecimal implements Interface {
      public String convert (Integer x)
     {
-        int hex_code;
+        Integer hex_code;
         String hex_number = "", hex_number_revers = "";
         char hex[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
         while(x != 0)

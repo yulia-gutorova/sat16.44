@@ -80,13 +80,12 @@ class Digit
         this.hex_number = hex_number;
     }
 
-    @Override
+    /*@Override
     public String toString ()
     {
         return "The decimal number is  " + this.decimal_number + "\nThe  binary number is   " +
                 this.binary_number + "\nThe octal number is   " + this.octal_number +
                 "\nThe heximal number is  " + this.hex_number;
-    }
-
+    }*/
 
 }
