@@ -9,6 +9,7 @@ class Digit
     private String octal_number;
     private String hex_number;
     static Integer  error = 0, warning = 0;
+    static Boolean bol = true;
 
     
     public Digit(int decimal_number, String binary_number, String octal_number, String hex_number)
@@ -26,12 +27,12 @@ class Digit
 
     public  void  setDecimal_number(Scanner input)
     {
-        if (input.hasNextInt())
-        {
-            warning = 0;
+        //if (input.hasNextInt())
+        //{
+            //warning = 0;
             decimal_number = input.nextInt();
 
-            if (decimal_number > 0)
+            if (decimal_number >= 0)
              {
             error = 0;
             this.decimal_number = decimal_number;
@@ -39,15 +40,17 @@ class Digit
              else
              {
             error = 1;
+            bol = false;
             System.out.println("You tried to input a negative number!");
              }
         }
-        else
+        /*else
         {
             warning = 1;
+            bol = false;
             System.out.println("It is not a number!");
-        }
-    }
+        }*/
+    //}
 
 
     public String getBinary_number()
