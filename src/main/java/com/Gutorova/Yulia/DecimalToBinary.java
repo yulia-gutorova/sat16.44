@@ -4,7 +4,7 @@ public class DecimalToBinary implements Interface {
 
         public String convert (Integer x)
         {
-            int bin_code;
+            Integer  bin_code;
             String bin_number = "", bin_number_revers = "";
             while (x != 0)
             {
