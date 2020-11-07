@@ -27,9 +27,6 @@ class Digit
 
     public  void  setDecimal_number(Scanner input)
     {
-        //if (input.hasNextInt())
-        //{
-            //warning = 0;
             decimal_number = input.nextInt();
 
             if (decimal_number >= 0)
@@ -44,13 +41,7 @@ class Digit
             System.out.println("You tried to input a negative number!");
              }
         }
-        /*else
-        {
-            warning = 1;
-            bol = false;
-            System.out.println("It is not a number!");
-        }*/
-    //}
+
 
 
     public String getBinary_number()
@@ -91,4 +82,13 @@ class Digit
                 "\nThe heximal number is  " + this.hex_number;
     }*/
 
+    @Override
+    public String toString() {
+        return TryAgain.GREEN + "Digit{" +
+                TryAgain.BLUE + "decimal_number = "   + TryAgain.RESET + decimal_number +
+                TryAgain.BLUE + ", binary_number = "  + TryAgain.RESET + binary_number  +
+                TryAgain.BLUE + ", octal_number = "   + TryAgain.RESET + octal_number   +
+                TryAgain.BLUE + ", hex_number = "    + TryAgain.RESET + hex_number      +
+                '}';
+    }
 }
