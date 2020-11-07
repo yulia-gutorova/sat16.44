@@ -1,0 +1,7 @@
+Even numbers
+Count of odd numbers: 4
+
+[31mDigit{[34mdecimal_number = [0m1[34m, binary_number = [0m1[34m, octal_number = [0m1[34m, hex_number = [0m1}
+[31mDigit{[34mdecimal_number = [0m3[34m, binary_number = [0m11[34m, octal_number = [0m3[34m, hex_number = [0m3}
+[31mDigit{[34mdecimal_number = [0m5[34m, binary_number = [0m101[34m, octal_number = [0m5[34m, hex_number = [0m5}
+[31mDigit{[34mdecimal_number = [0m7[34m, binary_number = [0m111[34m, octal_number = [0m7[34m, hex_number = [0m7}
