@@ -1,6 +1,4 @@
 Even numbers
-Count of even numbers: 3
+Count of even numbers: 1
 
-[31mDigit{[34mdecimal_number = [0m2[34m, binary_number = [0m10[34m, octal_number = [0m2[34m, hex_number = [0m2}
-[31mDigit{[34mdecimal_number = [0m4[34m, binary_number = [0m100[34m, octal_number = [0m4[34m, hex_number = [0m4}
-[31mDigit{[34mdecimal_number = [0m6[34m, binary_number = [0m110[34m, octal_number = [0m6[34m, hex_number = [0m6}
+Digit{decimal_number = 2, binary_number = 10, octal_number = 2, hex_number = 2}
