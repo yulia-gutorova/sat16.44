@@ -9,7 +9,7 @@ class Digit
     private String octal_number;
     private String hex_number;
     static Integer  error = 0, warning = 0;
-    static Boolean bol = true;
+    Integer counter = 0;
 
     
     public Digit(int decimal_number, String binary_number, String octal_number, String hex_number)
@@ -37,13 +37,12 @@ class Digit
              else
              {
             error = 1;
-            bol = false;
+            counter ++;
+            if (counter == 1 )
             System.out.println("You tried to input a negative number!");
              }
         }
-
-
-
+        
     public String getBinary_number()
     {
         return binary_number;
@@ -84,11 +83,11 @@ class Digit
 
     @Override
     public String toString() {
-        return TryAgain.GREEN + "Digit{" +
-                TryAgain.BLUE + "decimal_number = "   + TryAgain.RESET + decimal_number +
-                TryAgain.BLUE + ", binary_number = "  + TryAgain.RESET + binary_number  +
-                TryAgain.BLUE + ", octal_number = "   + TryAgain.RESET + octal_number   +
-                TryAgain.BLUE + ", hex_number = "    + TryAgain.RESET + hex_number      +
+        return  "Digit{" +
+                "decimal_number = "  + decimal_number +
+                ", binary_number = " + binary_number  +
+                ", octal_number = "  + octal_number   +
+                ", hex_number = "    + hex_number      +
                 '}';
     }
 }

@@ -50,7 +50,13 @@ public class TryAgain
                 }
 
             }
-        else break;
+        else
+            {
+                if (count == 0) System.out.println("Invalid input");
+                break;
+            }
+
+
         } //end of while
 
         /* // Example of print with help of for:
