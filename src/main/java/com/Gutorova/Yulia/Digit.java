@@ -25,24 +25,8 @@ class Digit
         return decimal_number;
     }
 
-    public  void  setDecimal_number(Scanner input)
-    {
-            decimal_number = input.nextInt();
+    public  void  setDecimal_number(Integer decimal_number) { this.decimal_number = decimal_number; }
 
-            if (decimal_number >= 0)
-             {
-            error = 0;
-            this.decimal_number = decimal_number;
-             }
-             else
-             {
-            error = 1;
-            counter ++;
-            if (counter == 1 )
-            System.out.println("You tried to input a negative number!");
-             }
-        }
-        
     public String getBinary_number()
     {
         return binary_number;

@@ -1,5 +1,5 @@
 package com.Gutorova.Yulia;
 
-public interface Interface {
+public  interface Interface {
      String convert (Integer x);
 }

@@ -2,7 +2,7 @@ package com.Gutorova.Yulia;
 
 public class DecimalToBinary implements Interface {
 
-        public String convert (Integer x)
+        public  String convert (Integer x)
         {
             Integer  bin_code;
             String bin_number = "", bin_number_revers = "";

@@ -20,49 +20,17 @@ public class TryAgain
     static final String CYAN = "\u001b[36m";
 
     public static void main(String[] args) throws IOException {
-        int count = 0;
-        //Boolean bol = true;
-        Digit digit = new Digit(0, "0", "0", "0");
+
         List<Digit> listDigit = new ArrayList<>();
-        DecimalToHexadecimal hexa = new DecimalToHexadecimal();
-        DecimalToBinary bin = new DecimalToBinary();
-        DecimalToOctal oct = new DecimalToOctal();
-
-        Scanner inp = new Scanner(System.in);
-
-        System.out.print("Input a positive decimal number  ");
-
-        while (true )
-        {
-            if (inp.hasNextInt())
-            {
-
-                digit.setDecimal_number(inp);
-
-                if (Digit.error == 0)
-                {
-                    digit.setBinary_number(bin.convert(digit.getDecimal_number()));
-                    digit.setOctal_number(oct.convert(digit.getDecimal_number()));
-                    digit.setHex_number(hexa.convert(digit.getDecimal_number()));
-
-                    listDigit.add(new Digit(digit.getDecimal_number(), digit.getBinary_number(),digit.getOctal_number(), digit.getHex_number()));
-                    count ++;
-                }
-
-            }
-        else
-            {
-                if (count == 0) System.out.println("Invalid input");
-                break;
-            }
+        List<Integer> listOfPositiveIntegerNumbers = new ArrayList<>();
 
 
-        } //end of while
+        listOfPositiveIntegerNumbers = InputFromConsole.inputFromConsole();
 
-        /* // Example of print with help of for:
-        for (Digit d : listDigit)
-            System.out.println(d.getDecimal_number() + "\n" + d.getBinary_number() + "\n" + d.getOctal_number() + "\n" + d.getHex_number());
-        System.out.println("the program is finished");*/
+        System.out.println("listOfPositiveIntegerNumbers");
+        listOfPositiveIntegerNumbers.stream().forEach(in -> System.out.println(in));
+
+        listDigit = ListOfDigit.listOfDigit(listOfPositiveIntegerNumbers);
         List <Digit> evenNumbers = listDigit.stream().filter(dig -> dig.getDecimal_number()%2 == 0 ).collect(Collectors.toList());
         List <Digit> oddNumbers = listDigit.stream().filter(dig -> dig.getDecimal_number()%2 != 0 ).collect(Collectors.toList());
 
@@ -71,7 +39,6 @@ public class TryAgain
         writeToConsol.writeToConsol(listDigit, "");
         writeToConsol.writeToConsol(evenNumbers, "even");
         writeToConsol.writeToConsol(oddNumbers, "odd");
-
 
         WriteToFile writeToFile = new WriteToFile();
 
