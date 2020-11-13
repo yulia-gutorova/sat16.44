@@ -2,12 +2,15 @@ package com.Gutorova.Yulia;
 
 import org.junit.*;
 import java.util.Scanner;
+
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
+
+
 
 public class TestDigit {
 
-     Digit digit = new Digit(-5, "","","");
-     Scanner scanner = new Scanner("-5");
+     Digit digit = new Digit(1, "001","1","1");
 
      @BeforeClass
      public static void messBeforeClass()
@@ -15,29 +18,15 @@ public class TestDigit {
          System.out.println("----------------- Test of Digit class ----------------");
      }
 
-    /* @Test
-     public void testNegativeInput()
+     @Test
+     public void testSetNumbers()
      {
-         Scanner scanner = new Scanner("-5");
-         digit.setDecimal_number(scanner);
-         assertEquals((Integer) 1, Digit.error);
+          assertEquals(1, digit.getDecimal_number());
+          assertTrue("001".equals(digit.getBinary_number()));
+          assertTrue("1".equals(digit.getOctal_number()));
+          assertTrue("1".equals(digit.getHex_number()));
+
      }
 
-     @Test
-    public void TestStringInput()
-     {
-         Scanner scanner = new Scanner("hgf");
-         digit.setDecimal_number(scanner);
-         assertEquals((Integer) 1, Digit.warning);
-     }
-
-     @Test
-    public void  testRightInput()
-     {
-         Scanner scanner = new Scanner("5");
-         digit.setDecimal_number(scanner);
-         assertEquals((Integer) 0, Digit.error);
-         assertEquals((Integer) 0, Digit.warning);
-     }*/
 
 }

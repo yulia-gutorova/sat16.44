@@ -21,7 +21,6 @@ public class ListOfDigit {
             d.setOctal_number(oct.convert(d.getDecimal_number()));
             d.setHex_number(hexa.convert(d.getDecimal_number()));
             listD.add(new Digit(d.getDecimal_number(), d.getBinary_number(),d.getOctal_number(), d.getHex_number()));
-
         }
 
         return listD;

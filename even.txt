@@ -1,4 +1,4 @@
 evennumbers
 Count of even numbers: 1
 
-Digit{decimal_number = 2, binary_number = 10, octal_number = 2, hex_number = 2}
+Digit{decimal_number = 4, binary_number = 100, octal_number = 4, hex_number = 4}

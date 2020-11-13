@@ -23,27 +23,63 @@ public class TryAgain
 
         List<Digit> listDigit = new ArrayList<>();
         List<Integer> listOfPositiveIntegerNumbers = new ArrayList<>();
+        List <EvenOrOddNumber> evenOrOddNumbers = new ArrayList<>();
+        Digit d = new Digit(0, "0", "0", "0");
+        EvenOrOddNumber e = new EvenOrOddNumber(0,"0","0","0",true, false);
 
-
+// call the method inputFromConsole() to wtine numbers from console to a list
         listOfPositiveIntegerNumbers = InputFromConsole.inputFromConsole();
+//---------------------------------------------------------------------------------------
 
         System.out.println("listOfPositiveIntegerNumbers");
         listOfPositiveIntegerNumbers.stream().forEach(in -> System.out.println(in));
 
+// call the method listOfDigit to create a list that consists of elements of type Digit
         listDigit = ListOfDigit.listOfDigit(listOfPositiveIntegerNumbers);
+//---------------------------------------------------------------------------------------
+
+//call the method listOfEvenOrOdd to create a list that consists of elements of type EvenOrOddNumber
+        evenOrOddNumbers = ListOfEvenOrOdd.listOfEvenOrOdd(listOfPositiveIntegerNumbers);
+//---------------------------------------------------------------------------------------
+
+// stream to create a list of even numbers and a list of odd numbers
         List <Digit> evenNumbers = listDigit.stream().filter(dig -> dig.getDecimal_number()%2 == 0 ).collect(Collectors.toList());
         List <Digit> oddNumbers = listDigit.stream().filter(dig -> dig.getDecimal_number()%2 != 0 ).collect(Collectors.toList());
 
+//---------------------------------------------------------------------------------------
+
+//cal the method writeToConsol to write the lists to console
         WriteToConsol writeToConsol = new WriteToConsol();
 
         writeToConsol.writeToConsol(listDigit, "");
         writeToConsol.writeToConsol(evenNumbers, "even");
         writeToConsol.writeToConsol(oddNumbers, "odd");
+//---------------------------------------------------------------------------------------
 
+//call the method WriteToFile to write the lists to files
         WriteToFile writeToFile = new WriteToFile();
 
         writeToFile.writeToFile("C:\\Users\\Yulia\\IdeaProjects\\sat16.44\\even.txt", evenNumbers, "even");
         writeToFile.writeToFile("C:\\Users\\Yulia\\IdeaProjects\\sat16.44\\odd.txt", oddNumbers, "odd");
+//---------------------------------------------------------------------------------------
+
+
+       // writeToFile.writeToFile("C:\\Users\\Yulia\\IdeaProjects\\sat16.44\\even.txt", evenOrOddNumbers, "even or odd");
+
+        /*for (Digit element : listDigit) {
+            evenOrOdd.setDecimal_number(element.getDecimal_number());
+            evenOrOdd.setBinary_number(element.getBinary_number());
+            evenOrOdd.setOctal_number(element.getOctal_number());
+            evenOrOdd.setOctal_number(element.getOctal_number());
+            evenOrOdd.setEven(element.getDecimal_number());
+            evenOrOdd.setOdd(element.getDecimal_number());
+            evenOrOddNumbers.add(new EvenOrOddNumber(evenOrOdd.getDecimal_number(), evenOrOdd.getBinary_number(), evenOrOdd.getOctal_number(), evenOrOdd.getHex_number(), evenOrOdd.getEven(), evenOrOdd.getOdd()));
+        }*/
+
+
+        //evenOrOddNumbers.stream().forEach(e -> System.out.println(e));
+        writeToConsol.writeToConsol(evenOrOddNumbers, "Even or odd numbers");
+
 
     }//end of main
 }// end of Tryagain

@@ -8,10 +8,7 @@ class Digit
     private String binary_number;
     private String octal_number;
     private String hex_number;
-    static Integer  error = 0, warning = 0;
-    Integer counter = 0;
 
-    
     public Digit(int decimal_number, String binary_number, String octal_number, String hex_number)
     {
         this.decimal_number = decimal_number;

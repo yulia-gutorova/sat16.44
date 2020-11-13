@@ -37,7 +37,7 @@ public class InputFromConsole {
                 if (j >= 0)
                 {
                     listInteger.add(j);
-                    warning = "Positiv number";
+                    warning = "Positive number";
                 }
                 else
                 {

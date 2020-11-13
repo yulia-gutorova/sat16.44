@@ -1,5 +1,4 @@
 oddnumbers
-Count of odd numbers: 2
+Count of odd numbers: 1
 
-Digit{decimal_number = 1, binary_number = 1, octal_number = 1, hex_number = 1}
 Digit{decimal_number = 5, binary_number = 101, octal_number = 5, hex_number = 5}
