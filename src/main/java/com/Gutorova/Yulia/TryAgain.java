@@ -1,9 +1,7 @@
 package com.Gutorova.Yulia;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
 import java.io.*;
 import java.util.stream.Collectors;
@@ -22,13 +20,17 @@ public class TryAgain
     public static void main(String[] args) throws IOException {
 
         List<Digit> listDigit = new ArrayList<>();
+        List <String> listOfAllInputVariables = new ArrayList<>();
         List<Integer> listOfPositiveIntegerNumbers = new ArrayList<>();
         List <EvenOrOddNumber> evenOrOddNumbers = new ArrayList<>();
-        Digit d = new Digit(0, "0", "0", "0");
-        EvenOrOddNumber e = new EvenOrOddNumber(0,"0","0","0",true, false);
 
-// call the method inputFromConsole() to wtine numbers from console to a list
-        listOfPositiveIntegerNumbers = InputFromConsole.inputFromConsole();
+// cal the method inputFromConsoleToStringList to write all input variables from console to a list of type String
+
+        listOfAllInputVariables = InputFromConsole.inputFromConsoleToStringList();
+//---------------------------------------------------------------------------------------
+
+// call the method clearIntegerList to create a list of positive integer nimbers
+        listOfPositiveIntegerNumbers = ClearIntegerList.clearIntegerList(listOfAllInputVariables);
 //---------------------------------------------------------------------------------------
 
         System.out.println("listOfPositiveIntegerNumbers");
@@ -49,11 +51,12 @@ public class TryAgain
 //---------------------------------------------------------------------------------------
 
 //cal the method writeToConsol to write the lists to console
-        WriteToConsol writeToConsol = new WriteToConsol();
+        WriteToConsole writeToConsol = new WriteToConsole();
 
-        writeToConsol.writeToConsol(listDigit, "");
-        writeToConsol.writeToConsol(evenNumbers, "even");
-        writeToConsol.writeToConsol(oddNumbers, "odd");
+        writeToConsol.writeToConsole(listDigit, "");
+        writeToConsol.writeToConsole(evenNumbers, "even");
+        writeToConsol.writeToConsole(oddNumbers, "odd");
+        writeToConsol.writeToConsole(evenOrOddNumbers, "Even or odd numbers");
 //---------------------------------------------------------------------------------------
 
 //call the method WriteToFile to write the lists to files
@@ -61,6 +64,7 @@ public class TryAgain
 
         writeToFile.writeToFile("C:\\Users\\Yulia\\IdeaProjects\\sat16.44\\even.txt", evenNumbers, "even");
         writeToFile.writeToFile("C:\\Users\\Yulia\\IdeaProjects\\sat16.44\\odd.txt", oddNumbers, "odd");
+        writeToFile.writeToFile("C:\\Users\\Yulia\\IdeaProjects\\sat16.44\\even_odd.txt", evenOrOddNumbers, "even or odd numbers");
 //---------------------------------------------------------------------------------------
 
 
@@ -78,7 +82,7 @@ public class TryAgain
 
 
         //evenOrOddNumbers.stream().forEach(e -> System.out.println(e));
-        writeToConsol.writeToConsol(evenOrOddNumbers, "Even or odd numbers");
+
 
 
     }//end of main

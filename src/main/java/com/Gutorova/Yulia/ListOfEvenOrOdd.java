@@ -10,7 +10,6 @@ public class ListOfEvenOrOdd {
     {
         List <EvenOrOddNumber> listEvenOrOdd = new ArrayList<>();
         EvenOrOddNumber e = new EvenOrOddNumber(0,"0","0","0",true, false);
-        //Digit d = new Digit(0, "0", "0", "0");
         DecimalToHexadecimal hexa = new DecimalToHexadecimal();
         DecimalToBinary bin = new DecimalToBinary();
         DecimalToOctal oct = new DecimalToOctal();

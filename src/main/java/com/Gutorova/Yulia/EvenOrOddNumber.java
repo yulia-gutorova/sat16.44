@@ -16,8 +16,8 @@ public class EvenOrOddNumber extends Digit{
     }
 
     public void setEven( int d) {
-        if  (d%2 == 0) {isEven = Boolean.TRUE;}
-        else {isEven = Boolean.FALSE;}
+        if  (d%2 == 0) {isEven = Boolean.TRUE; isOdd = Boolean.FALSE;}
+        else {isEven = Boolean.FALSE; isOdd = Boolean.TRUE;}
     }
 
     public Boolean getOdd() {

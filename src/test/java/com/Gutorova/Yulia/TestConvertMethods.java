@@ -4,7 +4,8 @@ import org.junit.*;
 import java.util.Scanner;
 import static org.junit.Assert.*;
 
-public class TestTryAgain {
+public class TestConvertMethods {
+
     DecimalToHexadecimal hexa = new DecimalToHexadecimal();
     DecimalToBinary bin = new DecimalToBinary();
     DecimalToOctal oct = new DecimalToOctal();
@@ -25,7 +26,6 @@ public class TestTryAgain {
     @Test
     public void testDec_to_bin() throws Exception
     {
-
         System.out.println("*The test of the method <DecimalToBinary> to convert a decimal number to binary number*");
         assertTrue("Error in the method dec_to_bin","1100000111".equals(bin.convert(775)));
     }
@@ -48,7 +48,6 @@ public class TestTryAgain {
     public void testCorrectInput()
     {
         Scanner testinp = new Scanner ("775");
-
     }
 
     @After
