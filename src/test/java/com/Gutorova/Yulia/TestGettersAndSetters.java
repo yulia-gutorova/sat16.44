@@ -1,7 +1,6 @@
 package com.Gutorova.Yulia;
 
 import org.junit.*;
-import java.util.Scanner;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
@@ -18,7 +17,7 @@ public class TestGettersAndSetters {
      public void testDigitClass()
      {
           System.out.println("* Test of class Digit *");
-          Digit digit = new Digit(1, "001","1","1");
+          Number digit = new Number(1, "001","1","1");
           assertTrue(digit != null);
           assertEquals(1, digit.getDecimal_number());
           assertTrue("001".equals(digit.getBinary_number()));

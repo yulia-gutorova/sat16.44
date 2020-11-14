@@ -11,10 +11,6 @@ public class InputFromConsole {
 
     {
         List<String> listString = new ArrayList<>();
-
-        String warning = "";
-
-        System.out.println("Write some numbers, finish input with #");
         Scanner input = new Scanner(System.in);
 
         while (input.hasNext())
@@ -23,11 +19,8 @@ public class InputFromConsole {
             if (str.equals("#")) break;
             else listString.add(str);
         }
-        System.out.println("listString");
 
-        listString.stream().forEach(System.out::println);
         return listString;
-
 
     }// eng inputFromConsole
 }//end InputFromConsole

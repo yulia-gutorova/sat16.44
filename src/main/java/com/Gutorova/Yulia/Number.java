@@ -2,14 +2,14 @@ package com.Gutorova.Yulia;
 
 import java.util.Scanner;
 
-class Digit
+class Number
 {
     private Integer decimal_number;
     private String binary_number;
     private String octal_number;
     private String hex_number;
 
-    public Digit(int decimal_number, String binary_number, String octal_number, String hex_number)
+    public Number(int decimal_number, String binary_number, String octal_number, String hex_number)
     {
         this.decimal_number = decimal_number;
         this.binary_number = binary_number;
@@ -54,17 +54,11 @@ class Digit
         this.hex_number = hex_number;
     }
 
-    /*@Override
-    public String toString ()
-    {
-        return "The decimal number is  " + this.decimal_number + "\nThe  binary number is   " +
-                this.binary_number + "\nThe octal number is   " + this.octal_number +
-                "\nThe heximal number is  " + this.hex_number;
-    }*/
 
     @Override
     public String toString() {
-        return  "Digit{" +
+        return  getClass().getSimpleName() +
+                " Digit{" +
                 "decimal_number = "  + decimal_number +
                 ", binary_number = " + binary_number  +
                 ", octal_number = "  + octal_number   +

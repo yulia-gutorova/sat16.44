@@ -1,6 +1,6 @@
 package com.Gutorova.Yulia;
 
-public class EvenOrOddNumber extends Digit{
+public class EvenOrOddNumber extends Number {
 
     Boolean isEven;
     Boolean isOdd;

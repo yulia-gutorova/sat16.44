@@ -10,8 +10,8 @@ public class TryAgain
 
 {
     static final String RESET = "\u001b[0m";
-    static final String RED = "\u001b[32m";
-    static final String GREEN = "\u001b[31m";
+    static final String RED = "\u001b[31m";
+    static final String GREEN = "\u001b[32m";
     static final String YELLOW = "\u001b[33m";
     static final String BLUE = "\u001b[34m";
     static final String PURPLE = "\u001b[35m";
@@ -19,25 +19,26 @@ public class TryAgain
 
     public static void main(String[] args) throws IOException {
 
-        List<Digit> listDigit = new ArrayList<>();
+        List<Number> listDigit = new ArrayList<>();
         List <String> listOfAllInputVariables = new ArrayList<>();
         List<Integer> listOfPositiveIntegerNumbers = new ArrayList<>();
         List <EvenOrOddNumber> evenOrOddNumbers = new ArrayList<>();
 
 // cal the method inputFromConsoleToStringList to write all input variables from console to a list of type String
-
+        System.out.println(BLUE + "Write some numbers, finish input with #" + RESET);
         listOfAllInputVariables = InputFromConsole.inputFromConsoleToStringList();
+        System.out.println(YELLOW + "List of all input data: listString" + RESET);
+        listOfAllInputVariables.stream().forEach(System.out::println);
 //---------------------------------------------------------------------------------------
 
-// call the method clearIntegerList to create a list of positive integer nimbers
+// call the method clearIntegerList to create a list of positive integer numbers
         listOfPositiveIntegerNumbers = ClearIntegerList.clearIntegerList(listOfAllInputVariables);
-//---------------------------------------------------------------------------------------
 
-        System.out.println("listOfPositiveIntegerNumbers");
+        System.out.println(YELLOW + "List of positive integer numbers (clear input data): listOfPositiveIntegerNumbers" +  RESET);
         listOfPositiveIntegerNumbers.stream().forEach(in -> System.out.println(in));
 
 // call the method listOfDigit to create a list that consists of elements of type Digit
-        listDigit = ListOfDigit.listOfDigit(listOfPositiveIntegerNumbers);
+        listDigit = ListOfNumbers.listOfDigit(listOfPositiveIntegerNumbers);
 //---------------------------------------------------------------------------------------
 
 //call the method listOfEvenOrOdd to create a list that consists of elements of type EvenOrOddNumber
@@ -45,9 +46,13 @@ public class TryAgain
 //---------------------------------------------------------------------------------------
 
 // stream to create a list of even numbers and a list of odd numbers
-        List <Digit> evenNumbers = listDigit.stream().filter(dig -> dig.getDecimal_number()%2 == 0 ).collect(Collectors.toList());
-        List <Digit> oddNumbers = listDigit.stream().filter(dig -> dig.getDecimal_number()%2 != 0 ).collect(Collectors.toList());
+        List <Number> evenNumbers = listDigit.stream().filter(dig -> dig.getDecimal_number()%2 == 0 ).collect(Collectors.toList());
+        List <Number> oddNumbers = listDigit.stream().filter(dig -> dig.getDecimal_number()%2 != 0 ).collect(Collectors.toList());
 
+        // another way
+
+        List <EvenOrOddNumber> evenNumbers1 = evenOrOddNumbers.stream().filter(e -> e.isEven).collect(Collectors.toList());
+        List <EvenOrOddNumber> oddNumbers1 = evenOrOddNumbers.stream().filter(e -> e.isOdd).collect(Collectors.toList());
 //---------------------------------------------------------------------------------------
 
 //cal the method writeToConsol to write the lists to console
@@ -57,6 +62,11 @@ public class TryAgain
         writeToConsol.writeToConsole(evenNumbers, "even");
         writeToConsol.writeToConsole(oddNumbers, "odd");
         writeToConsol.writeToConsole(evenOrOddNumbers, "Even or odd numbers");
+
+        System.out.println(PURPLE + "\nAnother way to create a list of even numbers" + RESET);
+        writeToConsol.writeToConsole(evenNumbers1, "even");
+        System.out.println(PURPLE + "\nAnother way to create a list of even numbers" + RESET);
+        writeToConsol.writeToConsole(oddNumbers1, "odd" );
 //---------------------------------------------------------------------------------------
 
 //call the method WriteToFile to write the lists to files
@@ -68,25 +78,8 @@ public class TryAgain
 //---------------------------------------------------------------------------------------
 
 
-       // writeToFile.writeToFile("C:\\Users\\Yulia\\IdeaProjects\\sat16.44\\even.txt", evenOrOddNumbers, "even or odd");
-
-        /*for (Digit element : listDigit) {
-            evenOrOdd.setDecimal_number(element.getDecimal_number());
-            evenOrOdd.setBinary_number(element.getBinary_number());
-            evenOrOdd.setOctal_number(element.getOctal_number());
-            evenOrOdd.setOctal_number(element.getOctal_number());
-            evenOrOdd.setEven(element.getDecimal_number());
-            evenOrOdd.setOdd(element.getDecimal_number());
-            evenOrOddNumbers.add(new EvenOrOddNumber(evenOrOdd.getDecimal_number(), evenOrOdd.getBinary_number(), evenOrOdd.getOctal_number(), evenOrOdd.getHex_number(), evenOrOdd.getEven(), evenOrOdd.getOdd()));
-        }*/
-
-
-        //evenOrOddNumbers.stream().forEach(e -> System.out.println(e));
-
-
-
     }//end of main
-}// end of Tryagain
+}// end of TryAgain
 
 
 
