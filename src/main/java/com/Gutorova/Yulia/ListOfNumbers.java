@@ -3,13 +3,13 @@ package com.Gutorova.Yulia;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListOfDigit {
+public class ListOfNumbers {
 
-    public static List<Digit> listOfDigit (List <Integer> list)
+    public static List<Number> listOfDigit (List <Integer> list)
 
     {
-        List <Digit> listD = new ArrayList<>();
-        Digit d = new Digit(0, "0", "0", "0");
+        List <Number> listD = new ArrayList<>();
+        Number d = new Number(0, "0", "0", "0");
         DecimalToHexadecimal hexa = new DecimalToHexadecimal();
         DecimalToBinary bin = new DecimalToBinary();
         DecimalToOctal oct = new DecimalToOctal();
@@ -20,8 +20,7 @@ public class ListOfDigit {
             d.setBinary_number(bin.convert(d.getDecimal_number()));
             d.setOctal_number(oct.convert(d.getDecimal_number()));
             d.setHex_number(hexa.convert(d.getDecimal_number()));
-            listD.add(new Digit(d.getDecimal_number(), d.getBinary_number(),d.getOctal_number(), d.getHex_number()));
-
+            listD.add(new Number(d.getDecimal_number(), d.getBinary_number(),d.getOctal_number(), d.getHex_number()));
         }
 
         return listD;

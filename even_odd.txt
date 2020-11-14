@@ -1,0 +1,7 @@
+even or odd numbersnumbers
+Count of even or odd numbers numbers: 4
+
+EvenOrOddNumber{decimal number = 1, binary number = 1, octal nunber = 1, hexadecimal number = 1, isEven = false, isOdd = true}
+EvenOrOddNumber{decimal number = 2, binary number = 10, octal nunber = 2, hexadecimal number = 2, isEven = true, isOdd = false}
+EvenOrOddNumber{decimal number = 3, binary number = 11, octal nunber = 3, hexadecimal number = 3, isEven = false, isOdd = true}
+EvenOrOddNumber{decimal number = 4, binary number = 100, octal nunber = 4, hexadecimal number = 4, isEven = true, isOdd = false}
