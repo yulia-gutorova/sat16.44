@@ -44,11 +44,6 @@ public class TestConvertMethods {
         assertTrue("Error in the method dec_to_hex", "307".equals(hexa.convert(775)));
     }
 
-    @Test
-    public void testCorrectInput()
-    {
-        Scanner testinp = new Scanner ("775");
-    }
 
     @After
     public void MessAfterClass()

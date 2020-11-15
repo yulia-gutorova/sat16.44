@@ -1,6 +1,6 @@
 package com.Gutorova.Yulia;
 
-public class DecimalToHexadecimal implements Interface {
+public class DecimalToHexadecimal implements InterfaceConvertMethods {
      public String convert (Integer x)
     {
         Integer hex_code;

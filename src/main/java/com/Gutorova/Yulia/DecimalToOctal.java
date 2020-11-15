@@ -1,6 +1,6 @@
 package com.Gutorova.Yulia;
 
-public class DecimalToOctal implements Interface{
+public class DecimalToOctal implements InterfaceConvertMethods {
     public String convert (Integer x)
     {
         Integer oct_code;
