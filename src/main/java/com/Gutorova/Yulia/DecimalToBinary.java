@@ -1,6 +1,6 @@
 package com.Gutorova.Yulia;
 
-public class DecimalToBinary implements Interface {
+public class DecimalToBinary implements InterfaceConvertMethods {
 
         public  String convert (Integer x)
         {

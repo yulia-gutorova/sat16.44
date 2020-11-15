@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import java.io.*;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class TryAgain
@@ -19,14 +20,17 @@ public class TryAgain
 
     public static void main(String[] args) throws IOException {
 
+       // List<String> listString = new ArrayList<>();
         List<Number> listDigit = new ArrayList<>();
         List <String> listOfAllInputVariables = new ArrayList<>();
         List<Integer> listOfPositiveIntegerNumbers = new ArrayList<>();
         List <EvenOrOddNumber> evenOrOddNumbers = new ArrayList<>();
 
 // cal the method inputFromConsoleToStringList to write all input variables from console to a list of type String
+        Scanner inp = new Scanner(System.in);
+
         System.out.println(BLUE + "Write some numbers, finish input with #" + RESET);
-        listOfAllInputVariables = InputFromConsole.inputFromConsoleToStringList();
+        listOfAllInputVariables = InputFromConsole.inputFromConsoleToStringList(inp);
         System.out.println(YELLOW + "List of all input data: listString" + RESET);
         listOfAllInputVariables.stream().forEach(System.out::println);
 //---------------------------------------------------------------------------------------
