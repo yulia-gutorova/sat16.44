@@ -11,6 +11,8 @@ public class EvenOrOddNumber extends Number {
         this.isOdd = isOdd;
     }
 
+    public EvenOrOddNumber() {}
+
     public Boolean getEven() {
         return isEven;
     }

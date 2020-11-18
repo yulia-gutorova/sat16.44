@@ -17,6 +17,8 @@ class Number
         this.hex_number = hex_number;
     }
 
+    public Number() {}
+
     public int getDecimal_number()
     {
         return decimal_number;
@@ -53,7 +55,6 @@ class Number
     {
         this.hex_number = hex_number;
     }
-
 
     @Override
     public String toString() {
