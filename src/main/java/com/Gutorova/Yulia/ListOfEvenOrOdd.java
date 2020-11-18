@@ -6,7 +6,6 @@ import java.util.List;
 public class ListOfEvenOrOdd {
 
     public static List<EvenOrOddNumber> listOfEvenOrOdd (List <Integer> list)
-
     {
         List <EvenOrOddNumber> listEvenOrOdd = new ArrayList<>();
         EvenOrOddNumber e = new EvenOrOddNumber(0,"0","0","0",true, false);

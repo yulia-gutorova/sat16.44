@@ -21,6 +21,7 @@ public class TryAgain
     public static void main(String[] args) throws IOException {
 
        // List<String> listString = new ArrayList<>();
+        ClearIntegerList clear = new ClearIntegerList();
         List<Number> listDigit = new ArrayList<>();
         List <String> listOfAllInputVariables = new ArrayList<>();
         List<Integer> listOfPositiveIntegerNumbers = new ArrayList<>();
@@ -33,10 +34,12 @@ public class TryAgain
         listOfAllInputVariables = InputFromConsole.inputFromConsoleToStringList(inp);
         System.out.println(YELLOW + "List of all input data: listString" + RESET);
         listOfAllInputVariables.stream().forEach(System.out::println);
+
+        inp.close();
 //---------------------------------------------------------------------------------------
 
 // call the method clearIntegerList to create a list of positive integer numbers
-        listOfPositiveIntegerNumbers = ClearIntegerList.clearIntegerList(listOfAllInputVariables);
+        listOfPositiveIntegerNumbers = clear.clearIntegerList(listOfAllInputVariables);
 
         System.out.println(YELLOW + "List of positive integer numbers (clear input data): listOfPositiveIntegerNumbers" +  RESET);
         listOfPositiveIntegerNumbers.stream().forEach(in -> System.out.println(in));

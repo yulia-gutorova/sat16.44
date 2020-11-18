@@ -6,7 +6,6 @@ import java.util.List;
 public class ListOfNumbers {
 
     public static List<Number> listOfDigit (List <Integer> list)
-
     {
         List <Number> listD = new ArrayList<>();
         Number d = new Number(0, "0", "0", "0");
@@ -22,7 +21,6 @@ public class ListOfNumbers {
             d.setHex_number(hexa.convert(d.getDecimal_number()));
             listD.add(new Number(d.getDecimal_number(), d.getBinary_number(),d.getOctal_number(), d.getHex_number()));
         }
-
         return listD;
     }
 }
