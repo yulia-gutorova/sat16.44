@@ -1,8 +1,9 @@
 package com.Gutorova.Yulia;
 
-import org.junit.*;
-import java.util.Scanner;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.*;
+
+@Tag("unit")
 
 public class TestConvertMethods {
 
@@ -11,50 +12,50 @@ public class TestConvertMethods {
     DecimalToOctal oct = new DecimalToOctal();
     InputFromConsole input = new InputFromConsole();
 
-    @BeforeClass
+    @BeforeAll
     public static void messBeforeClassTest()
     {
-        System.out.println("----- My test of the program TryAgain -----\n");
+        System.out.println("----- My first unit tests of the program TryAgain -----\n");
     }
 
-    @Before
+    @BeforeEach
     public void messBeforeTest()
     {
         System.out.println("----- New test -----" ) ;
     }
 
     @Test
+    @DisplayName("Convert decimal numbers to binary numbers")
     public void testDec_to_bin() throws Exception
     {
-        System.out.println("*The test of the method <DecimalToBinary> to convert a decimal number to binary number*");
-        assertTrue("Error in the method dec_to_bin","1100000111".equals(bin.convert(775)));
+        Assertions.assertTrue("1100000111".equals(bin.convert(775)),"Error in the method dec_to_bin");
     }
 
     @Test
+    @DisplayName("Convert decimal numbers to an octal numbers")
     public void testDec_to_oct() throws  Exception
     {
-        System.out.println("*The test of the method <DecimalToOctal> to convert a decimal number to octal number*");
-        assertTrue("Error in the method dec_to_oct","1407".equals(oct.convert(775)));
+        Assertions.assertTrue("1407".equals(oct.convert(775)), "Error in the method dec_to_oct");
     }
 
     @Test
+    @DisplayName("Convert decimal numbers to hexadecimal numbers")
     public void testDec_to_hex() throws Exception
     {
-        System.out.println("*The test of the method <DecimalToHexadecimal> to convert a decimal number to hexadecimal number*");
-        assertTrue("Error in the method dec_to_hex", "307".equals(hexa.convert(775)));
+        Assertions.assertTrue("307".equals(hexa.convert(775)), "Error in the method dec_to_hex");
     }
 
 
-    @After
+    @AfterEach
     public void MessAfterClass()
     {
         System.out.println("----- Test finished -----\n");
     }
 
-    @AfterClass
+    @AfterAll
     public static void MessAfter()
     {
-        System.out.println("----- Out test of the program TryAgain finished -----");
+        System.out.println("----- Finish of unit tests -----");
     }
 }
 
