@@ -8,7 +8,7 @@ import static org.mockito.Mockito.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
-public class MockTest {
+public class TestMock {
 
     @Test
     @Order(1)

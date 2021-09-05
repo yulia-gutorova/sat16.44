@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 
 
-public class TestofInputAndOutput {
+public class TestOfInputAndOutput {
 
     InputFromConsole inputFromConsole = new InputFromConsole();
     ClearIntegerList clear = new ClearIntegerList();
@@ -38,7 +38,7 @@ public class TestofInputAndOutput {
         for (String element : testString)
         {
             Scanner scanner = new Scanner(element);
-            fact = inputFromConsole.inputFromConsoleToStringList( scanner);
+            fact = inputFromConsole.inputFromConsoleToStringList(scanner);
             scanner.close();
         }
 
