@@ -25,7 +25,7 @@ public class TestMock {
         verify(dec, times(1)).convert(1);
      }
 
-    @Test
+/*    @Test
     @Order(2)
     @DisplayName("Mock the test which convert List of String to List of Integer.")
     public void mockTestClearIntegerList ()
@@ -40,6 +40,6 @@ public class TestMock {
         Assertions.assertArrayEquals(integers.toArray(), clear.clearIntegerList(str).toArray());
         verify(clear).clearIntegerList(str);
         verify(clear,atLeastOnce()).clearIntegerList(any());
-    }
+    }*/
 
 }
