@@ -38,8 +38,6 @@ public class TestOfInputAndOutput {
     @DisplayName("Test of input")
     public void TestOfAllDataInput()
     {
-       // int[] myIntArray = {1, 2, 3};
-      //  String[] myStringArray = {"a", "b", "c"};
 
         List<String> testString = Arrays.asList("0", "1", "-1", "1000", "ghjg", "3.4", "^&", " ", "#");
         List <String> testExpected = Stream.of("0", "1", "-1", "1000", "ghjg", "3.4", "^&").collect(Collectors.toList());
