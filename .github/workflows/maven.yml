@@ -23,6 +23,6 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn clean install
-    - name: Build with Maven
+    - name: run tests with Maven
       run: mvn test
       
