@@ -4,9 +4,6 @@
 name: Java CI with Maven
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -21,8 +18,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Maven
+    - name: _____Build with Maven
       run: mvn clean install
-    - name: run tests with Maven
+    - name: _____Run tests with Maven
       run: mvn test
       
