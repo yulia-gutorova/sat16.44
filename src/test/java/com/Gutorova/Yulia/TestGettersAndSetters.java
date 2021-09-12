@@ -2,9 +2,6 @@ package com.Gutorova.Yulia;
 
 import org.junit.jupiter.api.*;
 
-import static org.hamcrest.CoreMatchers.is;
-
-
 @Tag("unit")
 
 public class TestGettersAndSetters {
