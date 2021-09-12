@@ -1,17 +1,19 @@
 package com.Gutorova.Yulia;
 
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 public class TestOfInputAndOutput {
+
 
     InputFromConsole inputFromConsole = new InputFromConsole();
     ClearIntegerList clear = new ClearIntegerList();
@@ -22,9 +24,13 @@ public class TestOfInputAndOutput {
     @DisplayName("Test of clear input")
     public  void  testOfClearInput()
     {
-        List<String> testString = List.of ("0", "1", "-1", "1000", "ghjg", "3.4", "^&", " ", "#");
-        List<Integer> expected = List.of (0, 1, 1000);
-        List <Integer> testInt = clear.clearIntegerList(testString);
+        List<String> testString = Stream.of("0", "1", "-1", "1000", "ghjg", "3.4", "^&", " ", "#").collect(Collectors.toList());
+
+        Integer[] expectedList = {0, 1, 1000};
+        List<Integer> expected = Arrays.asList(expectedList);
+
+
+        List<Integer> testInt = clear.clearIntegerList(testString);
         Assertions.assertArrayEquals(expected.toArray(), testInt.toArray());
     }
 
@@ -32,8 +38,11 @@ public class TestOfInputAndOutput {
     @DisplayName("Test of input")
     public void TestOfAllDataInput()
     {
-        List<String> testString = List.of ("0", "1", "-1", "1000", "ghjg", "3.4", "^&", " ", "#");
-        List <String> testExpected = List.of ("0", "1", "-1", "1000", "ghjg", "3.4", "^&");
+       // int[] myIntArray = {1, 2, 3};
+      //  String[] myStringArray = {"a", "b", "c"};
+
+        List<String> testString = Arrays.asList("0", "1", "-1", "1000", "ghjg", "3.4", "^&", " ", "#");
+        List <String> testExpected = Stream.of("0", "1", "-1", "1000", "ghjg", "3.4", "^&").collect(Collectors.toList());
 
         for (String element : testString)
         {
